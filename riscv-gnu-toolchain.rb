@@ -51,9 +51,9 @@ class RiscvGnuToolchain < Formula
     ENV.delete "CPATH"
 
     # need to pull in needed submodules (now that they are disabled above)
-    system "git", "submodule", "update", "--init", "--recursive", "newlib"
-    system "git", "submodule", "update", "--init", "--recursive", "binutils"
-    system "git", "submodule", "update", "--init", "--recursive", "gcc"
+    system "git", "submodule", "update", "--init", "--recursive", "--depth=1", "newlib"
+    system "git", "submodule", "update", "--init", "--recursive", "--depth=1", "binutils"
+    system "git", "submodule", "update", "--init", "--recursive", "--depth=1", "gcc"
 
     args = [
       "--prefix=#{prefix}",
