@@ -5,9 +5,10 @@ class RiscvIsaSim < Formula
   version "main"
 
   bottle do
-    root_url "http://riscv.org.s3.amazonaws.com/bottles"
+    root_url "https://github.com/simnalamburt/homebrew-riscv/releases/download/riscv-gnu-toolchain"
     rebuild 11
     sha256 cellar: :any, monterey: "96833ffb92c478900f1cd296017461b4ef80d7c10839aace5739740c7042e006"
+    sha256 cellar: :any, arm64_monterey: "6ea46bf580c6c0205784e092f211e29ec861608fe8cd353451ce1bc62b19c831"
   end
 
   depends_on "dtc"
